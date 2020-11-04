@@ -2,24 +2,36 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ScalerField : MonoBehaviour
+public class ScalerField
 {
     // a data structure where we are going to store chunks
-    bool[][][] nodes;
-    // a function for flipping the boolean value of a node
-    void setNode(bool node)
+    private bool[ , , ] nodes;
+    // Here is where we initialize our field
+    public ScalerField(int x, int y, int z)
     {
-        node = !node;
-        onNodeChange();
+        if(x == 0 || y == 0 || z == 0)
+        {
+            nodes = new bool[50, 50, 50];
+        }
+        else
+        {
+            nodes = new bool[x, y, z];
+        }
     }
-    bool getNode(int x, int y, int z)
+    // Here is where we change the value of a particular node.
+    public void flipNode(int x, int y, int z)
     {
-        return nodes[x][y][z];
+        nodes[x, y, z] = !nodes[x, y, z];
     }
-    public void onNodeChange()
+    // Here is where we get the particular value of a node
+    public bool getNode(int x, int y, int z)
     {
-        //call reload(); check pdf in discord chat for more info.
-        // is added onto a empty to be played when a node is changed
+        return nodes[x, y, z];
     }
 
+
+    public void setNode(int x, int y, int z, bool value)
+    {
+        nodes[x, y, z] = value;
+    }
 }
