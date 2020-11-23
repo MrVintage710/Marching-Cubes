@@ -9,6 +9,15 @@ public class RotationCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Rotate(0, speed * Time.deltaTime, 0);
+        if (Input.GetKey("right"))
+        {
+            transform.Rotate(0, speed * Time.deltaTime, 0);
+        }
+        if (Input.GetKey("left"))
+        {
+            transform.Rotate(0, -speed * Time.deltaTime, 0);
+        }
+
+
     }
 }
