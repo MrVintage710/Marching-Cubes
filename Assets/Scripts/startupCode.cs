@@ -17,7 +17,7 @@ public class startupCode : MonoBehaviour
             {
                 for(int t = 0; t<= nodeScript; t++)
                 {
-                    //Instantiate(Node, new Vector3(i, r, t), Quaternion.identity);
+                    Instantiate(Node, new Vector3(i, r, t), Quaternion.identity);
                 }
             }
         }

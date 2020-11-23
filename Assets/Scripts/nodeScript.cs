@@ -10,32 +10,20 @@ public class nodeScript : MonoBehaviour
         this.GetComponent<Renderer>().material.color = Color.white;
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void OnMouseDown()
     {
-        if (Input.GetMouseButtonDown(0))
+        if(this.GetComponent<Renderer>().material.color == Color.white)
         {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if(Physics.Raycast(ray,out hit, 100.0f))
-            {
-                if(hit.transform != null)
-                {
-                    if(this.GetComponent<Renderer>().material.color == Color.white)
-                    {
-                        this.GetComponent<Renderer>().material.color = Color.gray;
-                        // send the node info as active
-                    }
-                    else
-                    {
-                        this.GetComponent<Renderer>().material.color = Color.white;
-                        // send the node info as deactive
-                    }
-                    Destroy(this.gameObject);
-
-                }
-            }
+            this.GetComponent<Renderer>().material.color = Color.grey;
+            // add to the mesh
         }
+        else
+        {
+            this.GetComponent<Renderer>().material.color = Color.white;
+            //remove from mesh
+        }
+        
     }
 }
+
