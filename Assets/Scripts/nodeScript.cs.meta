@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 05d433c23ff1309489cc9c23ba30247c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - transmaterial: {fileID: 2100000, guid: b94c36bddf83a3f45876990bdc8a5d21, type: 2}
+  - solidmaterial: {fileID: 2100000, guid: 95d21034ab281f440bd3d52ac4d3b073, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
