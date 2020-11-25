@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
-public class nodeScript : MonoBehaviour
-{
+public class nodeScript : MonoBehaviour {
+    private World world;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +20,9 @@ public class nodeScript : MonoBehaviour
         {
             this.GetComponent<Renderer>().material.color = Color.grey;
             // add to the mesh
+            Debug.Log("Click");
         }
+        
         else
         {
             this.GetComponent<Renderer>().material.color = Color.white;
